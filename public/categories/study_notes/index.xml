@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Study_notes on Yue Hao 郝樾</title>
+    <link>/categories/study_notes/</link>
+    <description>Recent content in Study_notes on Yue Hao 郝樾</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/study_notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to host your personal website on Github using Hugo</title>
+      <link>/2018/07/how-to-host-your-personal-website-on-github-using-hugo/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/how-to-host-your-personal-website-on-github-using-hugo/</guid>
+      <description>&lt;p&gt;A beginner&amp;rsquo;s tutorial for building a static website on Github with Hugo.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
