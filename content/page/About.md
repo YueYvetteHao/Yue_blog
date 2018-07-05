@@ -14,7 +14,7 @@ Advisor: [Dr. Gavin Conant](http://conantlab.org)<br>
 North Carolina State University (NCSU), Raleigh NC, USA<br>
 **M.S. in Biological Engineering**
 <br>Jul 2014<br>
-Advisor： Dr. Kevin Gillis<br>
+Advisor: Dr. Kevin Gillis<br>
 University of Missouri – Columbia (MU), Columbia MO, USA<br>
 **B.S. in Biological Science**
 <br>Jul 2012<br>
