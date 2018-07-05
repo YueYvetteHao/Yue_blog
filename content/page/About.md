@@ -8,13 +8,16 @@ showActions:    false
 
 
 ## Education
-**Ph.D. in Bioinformatics**.................................May 2020 (expected) <br>
+**Ph.D. in Bioinformatics**
+<br>May 2020 (expected) <br>
 Advisor: [Dr. Gavin Conant](http://conantlab.org)<br>
 North Carolina State University (NCSU), Raleigh NC, USA<br>
-**M.S. in Biological Engineering**.................................Jul 2014<br>
+**M.S. in Biological Engineering**
+<br>Jul 2014<br>
 Advisor： Dr. Kevin Gillis<br>
 University of Missouri – Columbia (MU), Columbia MO, USA<br>
-**B.S. in Biological Science**.................................Jul 2012<br>
+**B.S. in Biological Science**
+<br>Jul 2012<br>
 Advisor: Dr. Suxia Li<br>
 East China University of Science and Technology (ECUST), Shanghai China<br>
 
