@@ -16,7 +16,7 @@ showSocial: false
 Customize the static website with Hugo.
 <!--more-->
 
-In the previous [blog](https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo/), I shared how I built my website. Hugo makes everything easier, to edit the website, I can simply alter the configuration file {{< hl-text primary >}}config.toml{{< /hl-text >}}, and the markdown files in the {{< hl-text orange >}}content{{< /hl-text >}} folder. <br>
+In the previous [blog](https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/), I shared how I built my website. Hugo makes everything easier, to edit the website, I can simply alter the configuration file {{< hl-text primary >}}config.toml{{< /hl-text >}}, and the markdown files in the {{< hl-text orange >}}content{{< /hl-text >}} folder. <br>
 Here I will show a few examples of how to customize the website.
 <!-- toc -->
 
