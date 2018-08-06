@@ -25,7 +25,7 @@ East China University of Science and Technology (ECUST), Shanghai China<br>
 ## Research projects
 
 [See here for a complete list of my projects.](/page/projects/)<br>
-[My talk on youtube & youku [中文]](http://cgmonline.co/2018/06/cgm-%E7%AC%AC32%E6%9C%9Fpreferential-retention-of-homeologs-from-a-single-parental-subgenome-after-polyploidy-is-shaped-by-functional-interactions-and-dosage-based-intrinsic-selective-constraint/)
+[My talk on youtube & youku [中文]](https://yueyvettehao.github.io/2018/06/cgm%E6%BC%94%E8%AE%B2/)
 
 ## Courses taken
 
