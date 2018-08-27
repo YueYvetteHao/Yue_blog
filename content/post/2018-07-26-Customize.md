@@ -8,7 +8,7 @@ tags:
 - github
 - markdown
 thumbnailImagePosition: left
-thumbnailImage: http://i1.bvimg.com/656790/b5c21e3721ffb111.jpg
+thumbnailImage: https://i.imgur.com/D65Isnt.jpg
 comments: false
 showSocial: false
 ---
