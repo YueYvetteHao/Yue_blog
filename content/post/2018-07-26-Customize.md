@@ -10,8 +10,8 @@ tags:
 - markdown
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/D65Isnt.jpg
-comments: false
-showSocial: false
+comments: true
+showSocial: true
 ---
 
 Customize the static website with Hugo.

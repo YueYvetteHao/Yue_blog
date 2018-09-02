@@ -9,8 +9,8 @@ tags:
 - fasta
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/BKidQJH.png
-comments: false
-showSocial: false
+comments: true
+showSocial: true
 ---
 
 [Biopython](https://biopython.org/) is awesome! :)
