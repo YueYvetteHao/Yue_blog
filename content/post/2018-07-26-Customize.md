@@ -3,6 +3,7 @@ title: "How to host your personal website on Github using Hugo (2/2)"
 date: 2018-07-26
 categories:
 - study_notes
+- website
 tags:
 - website
 - github
