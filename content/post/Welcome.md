@@ -15,8 +15,9 @@ comments:       false
 showMeta:       false
 showActions:    false
 ---
-Welcome to my personal blog. 
-<br>欢迎访问我的博客
-
+Welcome to my personal blog 欢迎访问我的博客。<br>
+[About me](https://yueyvettehao.github.io/page/about/). 
+[My projects](https://yueyvettehao.github.io/page/projects/).
+<!--more-->
 
 
