@@ -39,7 +39,7 @@ An R Shiny app for Mendelian Randomization with Biomarker Associations for Causa
 {{< alert warning no-icon>}}
 Status: in development 
 {{< /alert>}}
-### [clustifyR](https://ncbi-hackathons.github.io/clustifyR/)
+### [clustifyR](https://rnabioco.github.io/clustifyR/)
 An R package that classifies cells and clusters in single-cell RNA sequencing experiments using reference bulk RNA-seq data sets, gene signatures or marker genes. <br>
 {{< alert warning no-icon>}}
 Status: in development 
