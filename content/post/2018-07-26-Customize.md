@@ -139,8 +139,8 @@ In the {{< hl-text orange >}}layouts/index.html{{< /hl-text >}} file, insert the
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       <p>&emsp;&emsp;&emsp;Welcome to my personal blog<br>&emsp;&emsp;&emsp;欢迎访问我的博客<br>
-      &emsp;&emsp;&emsp;<a href="https://yueyvettehao.github.io/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
-      <a href="https://yueyvettehao.github.io/page/projects/"><i class="fa fa-tasks"></i> My projects</a>   </p>
+      &emsp;&emsp;&emsp;<a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
+      <a href="/page/projects/"><i class="fa fa-tasks"></i> My projects</a>   </p>
     </div>
   </div> 
 </article>
