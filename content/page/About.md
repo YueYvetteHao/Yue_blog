@@ -25,7 +25,7 @@ East China University of Science and Technology (ECUST), Shanghai China<br>
 ## Research projects
 
 [See here for a complete list of my projects.](/page/projects/)<br>
-[My talk on youtube & youku in Chinese [中文]](https://yueyvettehao.github.io/2018/06/cgm%E6%BC%94%E8%AE%B2/)
+[My talk on youtube & youku in Chinese [中文]](/2018/06/cgm%E6%BC%94%E8%AE%B2/)
 
 ## Courses taken
 
