@@ -1,6 +1,6 @@
 # Theme: Tranquilpeak (Thibaud Leprêtre)
 
-baseURL = "https://yueyvettehao.github.io"
+baseURL = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Yue Hao 郝樾"
