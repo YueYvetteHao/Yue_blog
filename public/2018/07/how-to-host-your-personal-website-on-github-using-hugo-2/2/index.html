@@ -1,0 +1,903 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>How to host your personal website on Github using Hugo (2/2)</title>
+    <meta name="author" content="Yue Hao">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+
+    
+    <meta name="description" content="Customize the static website with Hugo.
+">
+    <meta property="og:description" content="Customize the static website with Hugo.
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="How to host your personal website on Github using Hugo (2/2)">
+    <meta property="og:url" content="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+    <meta property="og:site_name" content="Yue Hao 郝樾">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yue Hao 郝樾">
+    <meta name="twitter:description" content="Customize the static website with Hugo.
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://i.imgur.com/mDyuAbY.jpg">
+    
+
+    
+      <meta property="og:image" content="https://i.imgur.com/D65Isnt.jpg">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-125119699-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">Yue Hao 郝樾</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Yue Hao</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>Serious broccoli</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/page/about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-smile-o"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/page/projects">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tasks"></i>
+      
+      <span class="sidebar-button-desc">Projects</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags/chinese/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-language"></i>
+      
+      <span class="sidebar-button-desc">中文</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://scholar.google.com/citations?user=UoI3bSQAAAAJ&amp;hl=en">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-graduation-cap"></i>
+      
+      <span class="sidebar-button-desc">Google Scholar</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.researchgate.net/profile/Yue_Hao15">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-briefcase"></i>
+      
+      <span class="sidebar-button-desc">ResearchGate</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/YueYvetteHao">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github-alt"></i>
+      
+      <span class="sidebar-button-desc">YueYvetteHao</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/yue_hao">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">yue_hao</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      How to host your personal website on Github using Hugo (2/2)
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-07-26T00:00:00Z">
+        
+  July 26, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/study_notes">study_notes</a>, 
+    
+      <a class="category-link" href="/categories/website">website</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Customize the static website with Hugo.
+</p>
+
+<p>In the previous <a href="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/">blog post</a>, I shared how I built my website. Hugo makes everything easier, to edit the website, I can simply alter the configuration file <span class="highlight-text primary">config.toml</span>, and the markdown files in the <span class="highlight-text orange">content</span> folder. For more advanced users, you may also edit the html files in the <span class="highlight-text orange">layouts</span> folder directly. <br>
+Here I will show a few examples of how to customize the website.
+<h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#posts-vs-pages">Posts vs pages</a></li>
+<li><a href="#customize-sidebar">Customize sidebar</a></li>
+<li><a href="#customize-cover-image">Customize cover image</a></li>
+<li><a href="#customize-favicon">Customize favicon</a></li>
+<li><a href="#pinned-welcome-message">Pinned welcome message</a></li>
+</ul>
+</nav></p>
+
+<h1 id="posts-vs-pages">Posts vs pages</h1>
+
+<p>The difference between <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#writing-posts">posts</a> and <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#writing-pages">pages</a> is that blog posts are dated and indexed, while pages are not. To write a page, first create a <span class="highlight-text orange">page</span> directory in the <span class="highlight-text orange">content</span> folder:</p>
+
+<pre><code>cd content
+mkdir page
+cd page
+</code></pre>
+
+<p>Then start a new markdown file with the following <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings">front-matter settings</a>:</p>
+
+<pre><code>---
+title: &quot;Title&quot;
+comments:       false
+showMeta:       false
+showActions:    false
+---
+</code></pre>
+
+<h1 id="customize-sidebar">Customize sidebar</h1>
+
+<p>The <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#sidebar">sidebar</a> allow users to navigate through the website easily. Edit settings under “Menu Configuration” in the <span class="highlight-text primary">config.toml</span> file to alter sidebar items and add <a href="https://fontawesome.com/">Font Awesome</a> icons. <br>
+Index page:</p>
+
+<pre><code># Menu Configuration
+[[menu.main]]
+  weight = 1
+  identifier = &quot;home&quot;
+  name = &quot;Home&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-home\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;/&quot;
+</code></pre>
+
+<p><em>About</em> <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#writing-pages">page</a>:</p>
+
+<pre><code>[[menu.main]]
+  weight = 2
+  identifier = &quot;about&quot;
+  name = &quot;About&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-smile-o\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;/page/about&quot;
+</code></pre>
+
+<p>Index all the blog posts in <em>Chinese</em>:</p>
+
+<pre><code>[[menu.main]]
+  weight = 7
+  identifier = &quot;chinese&quot;
+  name = &quot;中文&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-language\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;/tags/Chinese/&quot;
+</code></pre>
+
+<p>Add links to social media:</p>
+
+<pre><code>[[menu.links]]
+  weight = 1
+  identifier = &quot;google&quot;
+  name = &quot;Google Scholar&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-graduation-cap\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;https://scholar.google.com/citations?user=UoI3bSQAAAAJ&amp;hl=en&quot;
+</code></pre>
+
+<h1 id="customize-cover-image">Customize cover image</h1>
+
+<p>Upload the large image file to the &ldquo;cloud&rdquo; (imgur, Google Photo, etc.) and obtain a URL.
+Then insert the link to the <span class="highlight-text primary">config.toml</span> file, the website will load faster this way:</p>
+
+<pre><code> coverImage = &quot;https://i.imgur.com/CgrW7fU.jpg&quot;
+</code></pre>
+
+<h1 id="customize-favicon">Customize favicon</h1>
+
+<p>First, go to the <a href="https://realfavicongenerator.net/">Favicon Generator</a> website, upload your preferred favicon image, download the zip package generated by this <a href="https://realfavicongenerator.net/">website</a>, and extract the package to your <span class="highlight-text orange">static</span> folder. <br>
+To update the favicon for the website, you will need to edit the <span class="highlight-text primary">head.html</span> file in the <span class="highlight-text orange">layouts/partials/</span> directory. <br></p>
+
+<p>In the following line of code, change <span class="highlight-text yellow">/favicon.png</span> to <span class="highlight-text yellow">/favicon.ico</span>.
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight xml language-xml">
+  <figcaption>
+    
+      <span>head.html</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-xml"><code class="xml">&lt;link rel=&#34;icon&#34; href=&#34;{{ with .Site.Params.favicon }}{{ . }}{{ else }}/favicon.png{{ end }}&#34;&gt;</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+Then insert the html code provided by the <a href="https://realfavicongenerator.net/">Favicon Generator</a> below this line.
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight xml language-xml">
+  <figcaption>
+    
+      <span>head.html</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-xml"><code class="xml">&lt;link rel=&#34;icon&#34; href=&#34;{{ with .Site.Params.favicon }}{{ . }}{{ else }}/favicon.ico{{ end }}&#34;&gt;
+&lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;180x180&#34; href=&#34;/apple-touch-icon.png&#34;&gt;
+&lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;32x32&#34; href=&#34;/favicon-32x32.png&#34;&gt;
+&lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;16x16&#34; href=&#34;/favicon-16x16.png&#34;&gt;
+&lt;link rel=&#34;manifest&#34; href=&#34;/site.webmanifest&#34;&gt;
+&lt;link rel=&#34;mask-icon&#34; href=&#34;/safari-pinned-tab.svg&#34; color=&#34;#5bbad5&#34;&gt;
+&lt;meta name=&#34;msapplication-TileColor&#34; content=&#34;#da532c&#34;&gt;
+&lt;meta name=&#34;theme-color&#34; content=&#34;#ffffff&#34;&gt;</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+Once your website is deployed, you can use the <a href="https://realfavicongenerator.net/favicon_checker#.W4x8sJNKjow">Favicon Checker</a> to see if the favicon displayed properly on all platforms (desktop computers, mac, tablets, etc.).</p>
+
+<h1 id="pinned-welcome-message">Pinned welcome message</h1>
+
+<p><p>I like the style of the home page provided by the theme. However, I wanted to “pin” a welcome message at the top. I think the correct method is to edit the layout. But I haven&rsquo;t figured out how to do that&hellip; <br>
+So I simply created a post that dates in the future. Since the blog previews are ordered by time, this post will always be on top. :)</p>
+
+<pre><code>---
+title: &quot;Welcome! 欢迎&quot;
+date: 2028-04-23
+comments:       false
+showMeta:       false
+showActions:    false
+---
+</code></pre>
+
+<p>The disadvantage of doing this is the welcome post will be indexed and will show up in archives and categories. </p><br>
+<strong><span class="highlight-text purple">Update 09/03:</span></strong> <br>
+I figured out how to hard code a welcome message into the webpage. :)<br>
+In the <span class="highlight-text orange">layouts/index.html</span> file, insert the following code below line 8 (which starts with <code>&lt;div id=&quot;main&quot;</code>&hellip;):
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight xml language-xml">
+  <figcaption>
+    
+      <span>index.html</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-xml"><code class="xml">&lt;article class=&#34;postShorten postShorten--thumbnailimg-top&#34; itemscope itemType=&#34;http://schema.org/BlogPosting&#34;&gt;
+  &lt;div class=&#34;postShorten-wrap&#34;&gt;
+    &lt;div class=&#34;postShorten-header&#34;&gt;
+      &lt;h1 class=&#34;postShorten-title&#34; itemprop=&#34;headline&#34;&gt;
+        &amp;emsp;&amp;emsp;Welcome! 欢迎
+      &lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;postShorten-excerpt&#34; itemprop=&#34;articleBody&#34;&gt;
+      &lt;p&gt;&amp;emsp;&amp;emsp;&amp;emsp;Welcome to my personal blog&lt;br&gt;&amp;emsp;&amp;emsp;&amp;emsp;欢迎访问我的博客&lt;br&gt;
+      &amp;emsp;&amp;emsp;&amp;emsp;&lt;a href=&#34;https://yueyvettehao.github.io/page/about/&#34;&gt;&lt;i class=&#34;fa fa-smile-o&#34;&gt;&lt;/i&gt; About me&lt;/a&gt;&amp;emsp;&amp;emsp;
+      &lt;a href=&#34;https://yueyvettehao.github.io/page/projects/&#34;&gt;&lt;i class=&#34;fa fa-tasks&#34;&gt;&lt;/i&gt; My projects&lt;/a&gt;   &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/article&gt;</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+The &ldquo;emsp&rdquo; adds white spaces before texts. In html, &ldquo;nbsp&rdquo;  adds a single space, &ldquo;ensp&rdquo; adds 2 spaces, &ldquo;emsp&rdquo; adds 4 spaces. And to get a tab, use &ldquo;nbsp&rdquo; four times.<br>I also inserted a few <a href="https://www.w3schools.com/icons/fontawesome_icons_intro.asp">Font Awesome</a> icons, just for fun.</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/website/">website</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/github/">github</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/markdown/">markdown</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/html/">html</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/09/using-biopython-to-concatenate-sequences-with-the-same-name/" data-tooltip="Using Biopython to concatenate sequences with the same name">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/" data-tooltip="How to host your personal website on Github using Hugo (1/2)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 <a href="https://github.com/YueYvetteHao">Yue Hao</a>. Hugo theme <a href="https://themes.gohugo.io/hugo-tranquilpeak-theme">tranquilpeak</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/09/using-biopython-to-concatenate-sequences-with-the-same-name/" data-tooltip="Using Biopython to concatenate sequences with the same name">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/" data-tooltip="How to host your personal website on Github using Hugo (1/2)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F07%2Fhow-to-host-your-personal-website-on-github-using-hugo-2%2F2%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F07%2Fhow-to-host-your-personal-website-on-github-using-hugo-2%2F2%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Yue Hao</h4>
+    
+      <div id="about-card-bio"><strong>Serious broccoli</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        PhD student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        NC State
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/09/using-biopython-to-concatenate-sequences-with-the-same-name/">
+                <h3 class="media-heading">Using Biopython to concatenate sequences with the same name</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><a href="https://biopython.org/">Biopython</a> is awesome! :)
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+                <h3 class="media-heading">How to host your personal website on Github using Hugo (2/2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Customize the static website with Hugo.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/">
+                <h3 class="media-heading">How to host your personal website on Github using Hugo (1/2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>A beginner&rsquo;s tutorial for building a static website on Github with Hugo.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/06/cgm%E6%BC%94%E8%AE%B2/">
+                <h3 class="media-heading">CGM演讲</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>非常感谢<a href="http://cgmonline.co/">北美华人基因组学在线沙龙</a>(Chinese Genomics online Meet-up, CGM)的主办方，让我有这次机会能用中文讲一讲自己在读博士期间所参与的<a href="http://cgmonline.co/2018/06/cgm-%E7%AC%AC32%E6%9C%9Fpreferential-retention-of-homeologs-from-a-single-parental-subgenome-after-polyploidy-is-shaped-by-functional-interactions-and-dosage-based-intrinsic-selective-constraint/">研究课题</a>。<br>
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         4 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://i.imgur.com/CgrW7fU.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/07\/how-to-host-your-personal-website-on-github-using-hugo-2\/2\/';
+          
+            this.page.identifier = '\/2018\/07\/how-to-host-your-personal-website-on-github-using-hugo-2\/2\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'https-yueyvettehao-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
