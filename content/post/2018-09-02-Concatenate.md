@@ -30,7 +30,7 @@ First, cat all the fasta files:
 ```
 cat *.fasta > all.fasta
 ```
-Then we can use a [dictionary](https://docs.python.org/2/library/stdtypes.html#typesmapping) to map all the sequence names:
+Then we can use a [dictionary](https://docs.python.org/2/library/stdtypes.html#typesmapping) to map all the sequence names (the code was adapted from [here](http://lists.open-bio.org/pipermail/biopython/2015-July/015711.html)):
 
 {{< codeblock "concat_seq.py "  "python" >}}
 #!/usr/bin/python
@@ -57,7 +57,6 @@ TCTCCTACT
 >Seq3
 TATCATAAT
 ```
-The code was adapted from [here](http://lists.open-bio.org/pipermail/biopython/2015-July/015711.html). :)
 
 # Concatenate alignment files
 
