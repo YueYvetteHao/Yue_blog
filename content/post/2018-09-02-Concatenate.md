@@ -60,7 +60,7 @@ TATCATAAT
 
 # Concatenate alignment files
 
-Similarly, use [AlignIO](https://biopython.org/wiki/AlignIO) to read in sequence alignment files and concatenate them into a [meta-alignment](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc77) file. For example, these files are in [relaxed phylip](https://biopython.org/wiki/AlignIO) format (the sequence identifies can be longer than 10 characters):
+Similarly, use [AlignIO](https://biopython.org/wiki/AlignIO) to read in sequence alignment files and concatenate them into a [meta-alignment](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc77) file. For example, these files are in [relaxed phylip](https://biopython.org/wiki/AlignIO) format (the sequence identifiers can be longer than 10 characters):
 ```
 # algn1.phy
      3    15
