@@ -65,7 +65,7 @@ Similarly, use [AlignIO](https://biopython.org/wiki/AlignIO) to read in sequence
 # algn1.phy
      3    15
 homo_sapiens                 GATAATGCTG ACTAC
-ailuropoda_melanoleuca       GATAATGCTG ACTAA
+ailuropoda_melanoleuca       GATAATGCTG ACTAT
 felis_catus                  GATAATGCTG ACTAT
 # algn2.phy
      3    15
@@ -104,7 +104,7 @@ outfh.close()
 And the output looks like:
 ```
  3 30
-ailuropoda_melanoleuca  GATAATGCTG ACTAAAGATT ATTTCAGAAA 
+ailuropoda_melanoleuca  GATAATGCTG ACTATAGATT ATTTCAGAAA 
 felis_catus             GATAATGCTG ACTATAGATT ATTTCAGAAA 
 homo_sapiens            GATAATGCTG ACTACAGATT ATTTCAGAAA 
 ```
