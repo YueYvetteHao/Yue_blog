@@ -1,12 +1,13 @@
 # Theme: Tranquilpeak (Thibaud Leprêtre)
 
-baseURL = "/"
+# baseURL = "https://yueyvettehao.github.io/"
+baseURL = "https://yueyvettehao.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Yue Hao 郝樾"
 theme = "hugo-tranquilpeak-theme"
 # disqusShortname = "https-yueyvettehao-github-io"
-disqusShortname = "hhttps-yueyvettehao-netlify-com"
+disqusShortname = "https-yueyvettehao-netlify-com"
 googleAnalytics = "UA-125119699-1"
 paginate = 7
 canonifyurls = true
