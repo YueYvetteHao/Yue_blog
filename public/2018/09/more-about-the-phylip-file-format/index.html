@@ -1,0 +1,851 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.37.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>More about the PHYLIP file format</title>
+    <meta name="author" content="Yue Hao">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://yueyvettehao.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://yueyvettehao.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yueyvettehao.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yueyvettehao.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://yueyvettehao.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://yueyvettehao.github.io/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+
+    
+    <meta name="description" content="How to restore the truncated sequence identifiers.
+">
+    <meta property="og:description" content="How to restore the truncated sequence identifiers.
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="More about the PHYLIP file format">
+    <meta property="og:url" content="/2018/09/more-about-the-phylip-file-format/">
+    <meta property="og:site_name" content="Yue Hao 郝樾">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yue Hao 郝樾">
+    <meta name="twitter:description" content="How to restore the truncated sequence identifiers.
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://i.imgur.com/mDyuAbY.jpg">
+    
+
+    
+      <meta property="og:image" content="https://i.imgur.com/ooNET01.jpg">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://yueyvettehao.github.io/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-125119699-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://yueyvettehao.github.io/">Yue Hao 郝樾</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://yueyvettehao.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://yueyvettehao.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Yue Hao</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>Serious broccoli</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/page/about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-smile-o"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/page/projects">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tasks"></i>
+      
+      <span class="sidebar-button-desc">Projects</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://yueyvettehao.github.io/tags/chinese/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-language"></i>
+      
+      <span class="sidebar-button-desc">中文</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://scholar.google.com/citations?user=UoI3bSQAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-graduation-cap"></i>
+      
+      <span class="sidebar-button-desc">Google Scholar</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.researchgate.net/profile/Yue_Hao15" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-briefcase"></i>
+      
+      <span class="sidebar-button-desc">ResearchGate</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/YueYvetteHao" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github-alt"></i>
+      
+      <span class="sidebar-button-desc">YueYvetteHao</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/yue_hao" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">yue_hao</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      More about the PHYLIP file format
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-21T00:00:00Z">
+        
+  September 21, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://yueyvettehao.github.io/categories/study_notes">study_notes</a>, 
+    
+      <a class="category-link" href="https://yueyvettehao.github.io/categories/perl">perl</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>How to restore the truncated sequence identifiers.
+</p>
+
+<p>In the previous <a href="https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/">post</a>, I mentioned that the length the sequence identifiers in the strict <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc75">PHYLIP</a> file format cannot exceed 10 characters. Longer sequence names will be truncated:</p>
+
+<pre><code># strict.phy
+     3    15
+homo_sapie GATAATGCTG ACTAC
+ailuropoda GATAATGCTG ACTAT
+felis_catu GATAATGCTG ACTAT
+</code></pre>
+
+<p>We can probably still figure out that they are human 👶, panda 🐼 and cat 🐱. But it might get confusing when the data contains many more sequences. <br>
+I wrote a perl script to restore the sequence names and change the alignment files to <a href="https://biopython.org/wiki/AlignIO">relaxed PHYLIP</a> format. <br>
+We will need a text file containing the full species names:</p>
+
+<pre><code># species_list.txt
+homo_sapiens
+ailuropoda_melanoleuca
+felis_catus
+</code></pre>
+
+<p>The code:
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight perl language-perl">
+  <figcaption>
+    
+      <span>change_phy_species_names.pl</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-perl"><code class="perl">#!/usr/bin/perl
+use strict;
+#Change species names in .phy file from 10 characters to full length.
+
+my ( $phyfile, $speciesfile, $readfh, $line, %Species_length, @array, %Firstten,
+   $num_species, $seq_length, $num_blocks, $i, $species, $ten_char, $species_length, 
+   @sort, $key, $speciesname_length, $space, $num, $j, @array, $outfile, $outfh, $k
+);
+
+$phyfile = $ARGV[0];
+$speciesfile = $ARGV[1];
+$outfile = &#34;relaxed_&#34;.$phyfile;
+
+open $readfh,&#39;&lt;&#39;,$speciesfile or die &#34;$!&#34;;
+while (!eof($readfh)) {
+    $line = &lt;$readfh&gt;;
+    $line =~ s/\r?\n*//g;
+    $Species_length{$line} = length($line);
+    $ten_char = $line;
+    $ten_char =~ s/^([\w\W]{10})[\w\W]&#43;/$1/g;
+    $Firstten{$ten_char} = $line;   
+}
+@array = ();
+foreach $key (sort keys %Species_length) {
+    push @array, $Species_length{$key};
+}
+@sort = sort { $a &lt;=&gt; $b } @array;
+#find the longest species name
+if ($sort[-1] &lt; 30) {
+    $speciesname_length = $sort[-1]; 
+} else {
+    $speciesname_length = 30;
+}
+close $readfh;
+open $readfh,&#39;&lt;&#39;,$phyfile or die &#34;$!&#34;;
+open $outfh,&#39;&gt;&#39;,$outfile or die &#34;$!&#34;;
+
+#headline
+$line = &lt;$readfh&gt;;
+$line =~ s/\r?\n*//g;
+# $line = $line.&#39;        I&#39;;
+print $outfh qq{$line\n};
+$line =~ s/\r?\n*//g;
+@array = split /\s&#43;/, $line;
+$num_species = $array[1];
+$seq_length = $array[2];
+$num_blocks = int ($seq_length / 50);
+
+# first block with species names
+for ($i = 0; $i &lt; $num_species; $i&#43;&#43;) {
+    $space = &#39;&#39;;
+    $line = &lt;$readfh&gt;;
+    $line =~ s/\r?\n*//g;
+    @array = split /\s/, $line;
+    if (exists $Firstten{$array[0]} ){
+        $species = $Firstten{$array[0]};
+        shift(@array);
+        $species_length = length($species);
+        $num = $speciesname_length - $species_length;
+        if ($num &gt;= 0) {
+            for ($j = 0; $j &lt;= $num&#43;1; $j&#43;&#43;) {
+                $space = $space.&#34; &#34;;
+            }
+        }
+    }
+    print $outfh qq{$species$space };
+    foreach (@array) {
+        print $outfh qq{$_ };
+    }
+    print $outfh qq{\n};
+}
+    
+for ($k = 0; $k &lt; $num_blocks; $k&#43;&#43;) {
+    $line = &lt;$readfh&gt;;
+    print $outfh qq{\n};
+    for ($i = 0; $i &lt; $num_species; $i&#43;&#43;) {
+        $line = &lt;$readfh&gt;;
+        $line =~ s/\r?\n*//g;
+        @array = split /\s&#43;/, $line;
+        shift(@array);
+        for ($j = 0; $j &lt;= $speciesname_length&#43;2; $j&#43;&#43;) {
+            print $outfh qq{ };
+        }
+        foreach (@array) {
+            print $outfh qq{$_ };
+        }
+        print $outfh qq{\n};
+    }
+}   
+close $readfh;
+close $outfh;
+
+sub length {
+    my $line = $_;
+    my @array = split //, $line;
+    return scalar(@array);
+};</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+Usage: <code>./change_phy_species_names.pl strict.phy species_list.txt</code> <br>
+And the output will be:</p>
+
+<pre><code># relaxed.phy
+     3    15
+homo_sapiens                 GATAATGCTG ACTAC
+ailuropoda_melanoleuca       GATAATGCTG ACTAT
+felis_catus                  GATAATGCTG ACTAT
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://yueyvettehao.github.io/tags/phylip/">phylip</a>
+
+  <a class="tag tag--primary tag--small" href="https://yueyvettehao.github.io/tags/alignment/">alignment</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/" data-tooltip="Using Biopython to concatenate (aligned) sequences with the same name">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://yueyvettehao.github.io/2018/09/more-about-the-phylip-file-format/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://yueyvettehao.github.io/2018/09/more-about-the-phylip-file-format/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 <a href="https://github.com/YueYvetteHao">Yue Hao</a>. Hugo theme <a href="https://themes.gohugo.io/hugo-tranquilpeak-theme">tranquilpeak</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/" data-tooltip="Using Biopython to concatenate (aligned) sequences with the same name">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://yueyvettehao.github.io/2018/09/more-about-the-phylip-file-format/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://yueyvettehao.github.io/2018/09/more-about-the-phylip-file-format/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fyueyvettehao.github.io%2F2018%2F09%2Fmore-about-the-phylip-file-format%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fyueyvettehao.github.io%2F2018%2F09%2Fmore-about-the-phylip-file-format%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://i.imgur.com/mDyuAbY.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Yue Hao</h4>
+    
+      <div id="about-card-bio"><strong>Serious broccoli</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        PhD student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        NC State
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://yueyvettehao.github.io/2018/09/more-about-the-phylip-file-format/">
+                <h3 class="media-heading">More about the PHYLIP file format</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>How to restore the truncated sequence identifiers.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/">
+                <h3 class="media-heading">Using Biopython to concatenate (aligned) sequences with the same name</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><a href="https://biopython.org/">Biopython</a> is awesome! :)
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/">
+                <h3 class="media-heading">How to host your personal website on Github using Hugo (2/2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Customize the static website with Hugo.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/">
+                <h3 class="media-heading">How to host your personal website on Github using Hugo (1/2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>A beginner&rsquo;s tutorial for building a static website on Github with Hugo.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://yueyvettehao.github.io/2018/06/cgm%E6%BC%94%E8%AE%B2/">
+                <h3 class="media-heading">CGM演讲</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>非常感谢<a href="http://cgmonline.co/">北美华人基因组学在线沙龙</a>(Chinese Genomics online Meet-up, CGM)的主办方，让我有这次机会能用中文讲一讲自己在读博士期间所参与的<a href="http://cgmonline.co/2018/06/cgm-%E7%AC%AC32%E6%9C%9Fpreferential-retention-of-homeologs-from-a-single-parental-subgenome-after-polyploidy-is-shaped-by-functional-interactions-and-dosage-based-intrinsic-selective-constraint/">研究课题</a>。<br>
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         5 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://i.imgur.com/CgrW7fU.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://yueyvettehao.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/yueyvettehao.github.io\/2018\/09\/more-about-the-phylip-file-format\/';
+          
+            this.page.identifier = '\/2018\/09\/more-about-the-phylip-file-format\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'https-yueyvettehao-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
