@@ -7,6 +7,7 @@ categories:
 tags:
 - Biopython
 - fasta
+- alignment
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/BKidQJH.png
 comments: true
