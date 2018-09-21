@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yue Hao 郝樾</title>
+    <link>/</link>
+    <description>Recent content on Yue Hao 郝樾</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>More about the PHYLIP file format</title>
+      <link>/2018/09/more-about-the-phylip-file-format/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/more-about-the-phylip-file-format/</guid>
+      <description>&lt;p&gt;How to restore the truncated sequence identifiers.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Using Biopython to concatenate (aligned) sequences with the same name</title>
+      <link>/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://biopython.org/&#34;&gt;Biopython&lt;/a&gt; is awesome! :)
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to host your personal website on Github using Hugo (2/2)</title>
+      <link>/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</guid>
+      <description>&lt;p&gt;Customize the static website with Hugo.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to host your personal website on Github using Hugo (1/2)</title>
+      <link>/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/how-to-host-your-personal-website-on-github-using-hugo-1/2/</guid>
+      <description>&lt;p&gt;A beginner&amp;rsquo;s tutorial for building a static website on Github with Hugo.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CGM演讲</title>
+      <link>/2018/06/cgm%E6%BC%94%E8%AE%B2/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/cgm%E6%BC%94%E8%AE%B2/</guid>
+      <description>&lt;p&gt;非常感谢&lt;a href=&#34;http://cgmonline.co/&#34;&gt;北美华人基因组学在线沙龙&lt;/a&gt;(Chinese Genomics online Meet-up, CGM)的主办方，让我有这次机会能用中文讲一讲自己在读博士期间所参与的&lt;a href=&#34;http://cgmonline.co/2018/06/cgm-%E7%AC%AC32%E6%9C%9Fpreferential-retention-of-homeologs-from-a-single-parental-subgenome-after-polyploidy-is-shaped-by-functional-interactions-and-dosage-based-intrinsic-selective-constraint/&#34;&gt;研究课题&lt;/a&gt;。&lt;br&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/page/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/projects/</guid>
+      <description>PhD projects: Advisor: Dr. Gavin Conant
+Polyploidy and plant genome evolution I am studying the molecular evolution of post-polyploidization Brassica species including B. rapa, B. olecarea and B. napus. Status: data analysis
+ Papers:
+Emery et al. 2018. Preferential retention of genes from one parental genome after polyploidy illustrates the nature and scope of the genomic conflicts induced by hybridization. PLoS Genet 14(3):e1007267
+Hao et al. 2018. Patterns of population variation in two paleopolyploid eudicot lineages suggest that dosage-based selection on homeologs is long-lived.</description>
+    </item>
+    
+    <item>
+      <title>Yue Hao 郝樾</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description>Education Ph.D. in Bioinformatics May 2020 (expected) Advisor: Dr. Gavin Conant
+North Carolina State University (NCSU), Raleigh NC, USA
+M.S. in Biological Engineering Jul 2014
+Advisor: Dr. Kevin Gillis
+University of Missouri – Columbia (MU), Columbia MO, USA
+B.S. in Biological Science Jul 2012
+Advisor: Dr. Suxia Li
+East China University of Science and Technology (ECUST), Shanghai China
+Research projects See here for a list of my projects.
+My talk on youtube &amp;amp; youku in Chinese [中文]</description>
+    </item>
+    
+  </channel>
+</rss>

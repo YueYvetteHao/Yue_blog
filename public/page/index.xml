@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Yue Hao 郝樾</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on Yue Hao 郝樾</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/page/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/projects/</guid>
+      <description>PhD projects: Advisor: Dr. Gavin Conant
+Polyploidy and plant genome evolution I am studying the molecular evolution of post-polyploidization Brassica species including B. rapa, B. olecarea and B. napus. Status: data analysis
+ Papers:
+Emery et al. 2018. Preferential retention of genes from one parental genome after polyploidy illustrates the nature and scope of the genomic conflicts induced by hybridization. PLoS Genet 14(3):e1007267
+Hao et al. 2018. Patterns of population variation in two paleopolyploid eudicot lineages suggest that dosage-based selection on homeologs is long-lived.</description>
+    </item>
+    
+    <item>
+      <title>Yue Hao 郝樾</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description>Education Ph.D. in Bioinformatics May 2020 (expected) Advisor: Dr. Gavin Conant
+North Carolina State University (NCSU), Raleigh NC, USA
+M.S. in Biological Engineering Jul 2014
+Advisor: Dr. Kevin Gillis
+University of Missouri – Columbia (MU), Columbia MO, USA
+B.S. in Biological Science Jul 2012
+Advisor: Dr. Suxia Li
+East China University of Science and Technology (ECUST), Shanghai China
+Research projects See here for a list of my projects.
+My talk on youtube &amp;amp; youku in Chinese [中文]</description>
+    </item>
+    
+  </channel>
+</rss>
