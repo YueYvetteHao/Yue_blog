@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Yue Hao 郝樾</title>
-    <link>https://yueyvettehao.github.io/categories/python/</link>
+    <link>https://yueyvettehao.netlify.com/categories/python/</link>
     <description>Recent content in Python on Yue Hao 郝樾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://yueyvettehao.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yueyvettehao.netlify.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using Biopython to concatenate (aligned) sequences with the same name</title>
-      <link>https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</link>
+      <link>https://yueyvettehao.netlify.com/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</link>
       <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</guid>
+      <guid>https://yueyvettehao.netlify.com/2018/09/using-biopython-to-concatenate-aligned-sequences-with-the-same-name/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://biopython.org/&#34;&gt;Biopython&lt;/a&gt; is awesome! :)
 &lt;/p&gt;</description>
     </item>

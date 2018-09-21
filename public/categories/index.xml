@@ -2,56 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Yue Hao 郝樾</title>
-    <link>https://yueyvettehao.github.io/categories/</link>
+    <link>https://yueyvettehao.netlify.com/categories/</link>
     <description>Recent content in Categories on Yue Hao 郝樾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://yueyvettehao.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yueyvettehao.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Perl</title>
-      <link>https://yueyvettehao.github.io/categories/perl/</link>
+      <link>https://yueyvettehao.netlify.com/categories/perl/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/categories/perl/</guid>
+      <guid>https://yueyvettehao.netlify.com/categories/perl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Presentation</title>
-      <link>https://yueyvettehao.github.io/categories/presentation/</link>
+      <link>https://yueyvettehao.netlify.com/categories/presentation/</link>
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/categories/presentation/</guid>
+      <guid>https://yueyvettehao.netlify.com/categories/presentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://yueyvettehao.github.io/categories/python/</link>
+      <link>https://yueyvettehao.netlify.com/categories/python/</link>
       <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/categories/python/</guid>
+      <guid>https://yueyvettehao.netlify.com/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Study_notes</title>
-      <link>https://yueyvettehao.github.io/categories/study_notes/</link>
+      <link>https://yueyvettehao.netlify.com/categories/study_notes/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/categories/study_notes/</guid>
+      <guid>https://yueyvettehao.netlify.com/categories/study_notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
-      <link>https://yueyvettehao.github.io/categories/website/</link>
+      <link>https://yueyvettehao.netlify.com/categories/website/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/categories/website/</guid>
+      <guid>https://yueyvettehao.netlify.com/categories/website/</guid>
       <description></description>
     </item>
     

@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yue Hao 郝樾</title>
-    <link>https://yueyvettehao.github.io/tags/</link>
+    <link>https://yueyvettehao.netlify.com/tags/</link>
     <description>Recent content in Tags on Yue Hao 郝樾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://yueyvettehao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yueyvettehao.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Alignment</title>
-      <link>https://yueyvettehao.github.io/tags/alignment/</link>
+      <link>https://yueyvettehao.netlify.com/tags/alignment/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/alignment/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/alignment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Biopython</title>
-      <link>https://yueyvettehao.github.io/tags/biopython/</link>
+      <link>https://yueyvettehao.netlify.com/tags/biopython/</link>
       <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/biopython/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/biopython/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chinese</title>
-      <link>https://yueyvettehao.github.io/tags/chinese/</link>
+      <link>https://yueyvettehao.netlify.com/tags/chinese/</link>
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/chinese/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/chinese/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fasta</title>
-      <link>https://yueyvettehao.github.io/tags/fasta/</link>
+      <link>https://yueyvettehao.netlify.com/tags/fasta/</link>
       <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/fasta/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/fasta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>https://yueyvettehao.github.io/tags/github/</link>
+      <link>https://yueyvettehao.netlify.com/tags/github/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/github/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Html</title>
-      <link>https://yueyvettehao.github.io/tags/html/</link>
+      <link>https://yueyvettehao.netlify.com/tags/html/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/html/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>https://yueyvettehao.github.io/tags/markdown/</link>
+      <link>https://yueyvettehao.netlify.com/tags/markdown/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/markdown/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phylip</title>
-      <link>https://yueyvettehao.github.io/tags/phylip/</link>
+      <link>https://yueyvettehao.netlify.com/tags/phylip/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/phylip/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/phylip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Polyploidy</title>
-      <link>https://yueyvettehao.github.io/tags/polyploidy/</link>
+      <link>https://yueyvettehao.netlify.com/tags/polyploidy/</link>
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/polyploidy/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/polyploidy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Presentation</title>
-      <link>https://yueyvettehao.github.io/tags/presentation/</link>
+      <link>https://yueyvettehao.netlify.com/tags/presentation/</link>
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/presentation/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/presentation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
-      <link>https://yueyvettehao.github.io/tags/website/</link>
+      <link>https://yueyvettehao.netlify.com/tags/website/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/tags/website/</guid>
+      <guid>https://yueyvettehao.netlify.com/tags/website/</guid>
       <description></description>
     </item>
     

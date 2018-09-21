@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Yue Hao 郝樾</title>
-    <link>https://yueyvettehao.github.io/page/</link>
+    <link>https://yueyvettehao.netlify.com/page/</link>
     <description>Recent content in Pages on Yue Hao 郝樾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://yueyvettehao.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yueyvettehao.netlify.com/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://yueyvettehao.github.io/page/projects/</link>
+      <link>https://yueyvettehao.netlify.com/page/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/page/projects/</guid>
+      <guid>https://yueyvettehao.netlify.com/page/projects/</guid>
       <description>PhD projects: Advisor: Dr. Gavin Conant
 Polyploidy and plant genome evolution I am studying the molecular evolution of post-polyploidization Brassica species including B. rapa, B. olecarea and B. napus. Status: data analysis
  Papers:
@@ -25,10 +25,10 @@ Hao et al. 2018. Patterns of population variation in two paleopolyploid eudicot 
     
     <item>
       <title>Yue Hao 郝樾</title>
-      <link>https://yueyvettehao.github.io/page/about/</link>
+      <link>https://yueyvettehao.netlify.com/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/page/about/</guid>
+      <guid>https://yueyvettehao.netlify.com/page/about/</guid>
       <description>Education Ph.D. in Bioinformatics May 2020 (expected) Advisor: Dr. Gavin Conant
 North Carolina State University (NCSU), Raleigh NC, USA
 M.S. in Biological Engineering Jul 2014

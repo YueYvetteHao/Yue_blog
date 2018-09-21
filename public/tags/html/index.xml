@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Yue Hao 郝樾</title>
-    <link>https://yueyvettehao.github.io/tags/html/</link>
+    <link>https://yueyvettehao.netlify.com/tags/html/</link>
     <description>Recent content in Html on Yue Hao 郝樾</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://yueyvettehao.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yueyvettehao.netlify.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to host your personal website on Github using Hugo (2/2)</title>
-      <link>https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</link>
+      <link>https://yueyvettehao.netlify.com/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yueyvettehao.github.io/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</guid>
+      <guid>https://yueyvettehao.netlify.com/2018/07/how-to-host-your-personal-website-on-github-using-hugo-2/2/</guid>
       <description>&lt;p&gt;Customize the static website with Hugo.
 &lt;/p&gt;</description>
     </item>
