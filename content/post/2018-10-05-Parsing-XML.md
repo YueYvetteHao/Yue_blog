@@ -58,7 +58,7 @@ For example, here is a file containing metabolites data and the pathways each me
 </metabolite>
 </data>
 {{< /codeblock >}}
-We want to extract the id and name of each metabolite, as well as all the pathway names for each metabolite.<br>
+We want to extract the id and name of each metabolite, as well as all the pathway names for each metabolite. 
 Here is a short python script for parsing nested xml files:
 {{< codeblock "nested_xml_parser.py" "python" >}}
 #!/usr/bin/python
