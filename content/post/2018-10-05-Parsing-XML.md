@@ -21,7 +21,7 @@ For example, here is a file containing metabolites data and the pathways each me
 <?xml version="1.0"?>
 <data>
 <metabolite id="1">
-  <accession >METAB0001</accession>
+  <accession>METAB0001</accession>
   <secondary_accessions>
     <accession>001</accession>
     <accession>002</accession>
