@@ -75,12 +75,12 @@ def main():
     metid = child.find('accession').text
     sys.stdout.write(metid + '\t' + metname + '\t')
     for node in child.findall('.//secondary_accessions'):
-      for snode in node.findall('accession'):
-        sys.stdout.write(snode.text + '\t')
+      for subnode in node.findall('accession'):
+        sys.stdout.write(subnode.text + '\t')
     print '\r'
     for node in child.findall('.//pathways'):
-      for snode in node.getchildren():
-        pathname = snode.find('name').text
+      for subnode in node.getchildren():
+        pathname = subnode.find('name').text
         print pathname
     print '\r'   
      
