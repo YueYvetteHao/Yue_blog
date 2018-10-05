@@ -15,43 +15,43 @@ showSocial: true
 How to parse nested xml files with the [`xml.etree.ElementTree`](https://docs.python.org/3/library/xml.etree.elementtree.html) module.
 <!--more-->
 
-XML is a data format that is similar to html: information was organized hierarchically between layers of paired brackets. <br>
+XML is a data format that is similar to html: information was organized hierarchically between layers of paired brackets. 
 For example, here is a file containing metabolites data and the pathways each metabolite participates in:
 {{< codeblock "metab.xml" "xml" >}}
 <?xml version="1.0"?>
 <data>
-<metabolite id="Bc103">
-  <accession >HMDB00001</accession>
+<metabolite id="1">
+  <accession >METAB0001</accession>
   <secondary_accessions>
     <accession>001</accession>
     <accession>002</accession>
   </secondary_accessions>
-  <name>1-Methylhistidine</name>
+  <name>MET1</name>
   <pathways>
     <pathway>
-      <name>Histidine Metabolism</name>
-      <smpdb_id>SMP00044</smpdb_id>
-      <kegg_map_id>map00340</kegg_map_id>
+      <name>path1</name>
+      <smpdb_id>SMP1</smpdb_id>
+      <kegg_map_id>map1</kegg_map_id>
     </pathway>
     <pathway>
-      <name>Histidinemia</name>
-      <smpdb_id>SMP00191</smpdb_id>
+      <name>path2</name>
+      <smpdb_id>SMP2</smpdb_id>
       <kegg_map_id/>
     </pathway>
   </pathways>
 </metabolite>
-<metabolite id="Bc103">
-  <name>2-Ketobutyric acid</name>
-  <accession>HMDB00002</accession>
+<metabolite id="2">
+  <accession>METAB0002</accession>
+  <name>MET2</name>
   <pathways>
     <pathway>
-      <name>Beta-Alanine Metabolism</name>
-      <smpdb_id>SMP00044</smpdb_id>
-      <kegg_map_id>map00340</kegg_map_id>
+      <name>path2</name>
+      <smpdb_id>SMP2</smpdb_id>
+      <kegg_map_id>map2</kegg_map_id>
     </pathway>
     <pathway>
-      <name>Carnosinuria, carnosinemia</name>
-      <smpdb_id>SMP00191</smpdb_id>
+      <name>path3</name>
+      <smpdb_id>SMP3</smpdb_id>
       <kegg_map_id/>
     </pathway>
   </pathways>
@@ -88,3 +88,15 @@ if __name__ == '__main__':
   main()
 
 {{< /codeblock >}}
+
+The output will be:
+```
+METAB0001	MET1	001	002	
+path1
+path2
+
+METAB0002	MET2	
+path2
+path3
+
+```
