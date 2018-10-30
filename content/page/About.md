@@ -4,9 +4,7 @@ comments:       false
 showMeta:       false
 showActions:    false
 ---
-
-
-
+[🏠Home](https://yueyvettehao.netlify.com/)
 ## Education
 **Ph.D. in Bioinformatics**
 <br>May 2020 (expected) <br>
@@ -21,9 +19,7 @@ University of Missouri – Columbia (MU), Columbia MO, USA<br>
 Advisor: Dr. Suxia Li<br>
 East China University of Science and Technology (ECUST), Shanghai China<br>
 
-
 ## Research projects
-
 [See here for a list of my projects.](/page/projects/)<br>
 [My talk on youtube & youku in Chinese [中文]](/2018/06/cgm%E6%BC%94%E8%AE%B2/)
 

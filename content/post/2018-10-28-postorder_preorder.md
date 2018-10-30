@@ -11,6 +11,8 @@ thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/CBynhOY.jpg
 comments: true
 showSocial: true
+gallery:
+- https://i.imgur.com/dAJS7Fo.jpg
 ---
 
 Converting internal node numbering from postorder to preorder in a bifurcating tree using [`DendroPy`](https://dendropy.org/).
