@@ -96,11 +96,11 @@ First, go to the [Favicon Generator](https://realfavicongenerator.net/) website,
 To update the favicon for the website, you will need to edit the {{< hl-text primary >}}head.html{{< /hl-text >}} file in the {{< hl-text orange >}}layouts/partials/{{< /hl-text >}} directory. <br>
 
 In the following line of code, change {{< hl-text yellow >}}/favicon.png{{< /hl-text >}} to {{< hl-text yellow >}}/favicon.ico{{< /hl-text >}}.
-{{< codeblock "head.html" "xml" >}}
+```
 <link rel="icon" href="{{ with .Site.Params.favicon }}{{ . }}{{ else }}/favicon.png{{ end }}">
-{{< /codeblock >}}
+```
 Then insert the html code provided by the [Favicon Generator](https://realfavicongenerator.net/) below this line.
-{{< codeblock "head.html" "xml" >}}
+```
 <link rel="icon" href="{{ with .Site.Params.favicon }}{{ . }}{{ else }}/favicon.ico{{ end }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -109,7 +109,7 @@ Then insert the html code provided by the [Favicon Generator](https://realfavico
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-{{< /codeblock >}}
+```
 Once your website is deployed, you can use the [Favicon Checker](https://realfavicongenerator.net/favicon_checker#.W4x8sJNKjow) to see if the favicon displayed properly on all platforms (desktop computers, mac, tablets, etc.).
 
 # Pinned welcome message
@@ -128,22 +128,32 @@ showActions:    false
 The disadvantage of doing this is the welcome post will be indexed and will show up in archives and categories. </p><br>
 **<p>{{< hl-text purple >}}Update 09/03:{{< /hl-text >}}</p>** <br>
 I figured out how to hard code a welcome message into the webpage. :)<br>
-In the {{< hl-text orange >}}layouts/index.html{{< /hl-text >}} file, insert the following code below line 8 (which starts with `<div id="main"`...):
-{{< codeblock "index.html" "xml" >}}
-<article class="postShorten postShorten--thumbnailimg-top" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        &emsp;&emsp;Welcome! 欢迎
-      </h1>
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p>&emsp;&emsp;&emsp;Welcome to my personal blog<br>&emsp;&emsp;&emsp;欢迎访问我的博客<br>
-      &emsp;&emsp;&emsp;<a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
-      <a href="/page/projects/"><i class="fa fa-tasks"></i> My projects</a>   </p>
-    </div>
-  </div> 
-</article>
-{{< /codeblock >}}
-The "emsp" adds white spaces before texts. In html, "nbsp"  adds a single space, "ensp" adds 2 spaces, "emsp" adds 4 spaces. And to get a tab, use "nbsp" four times.<br>I also inserted a few [Font Awesome](https://www.w3schools.com/icons/fontawesome_icons_intro.asp) icons, just for fun. 
+In the {{< hl-text orange >}}layouts/index.html{{< /hl-text >}} file, insert a new section before the article sections:
+```
+...
+<!-- Line above -->
+<div id="main" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}"
+        class="{{ with .Params.coverimage }}hasCover{{ end }}
+               {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
+               {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
+<!-- Welcome message section starts here -->
+<section class="postShorten-group main-content-wrap">
+    <div class="postShorten-wrap">
+      <div class="postShorten-header">
+        <h1 class="postShorten-title" itemprop="headline">Welcome! 欢迎</h1>
+      </div>
+      <div class="postShorten-excerpt" itemprop="articleBody">
+        <p>Welcome to my personal blog.<br>欢迎访问我的博客。<br>
+        <a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
+        <a href="/page/projects/"><i class="fa fa-tasks"></i> My projects</a></p>   
+      </div>
+    </div> 
+</section>
+<!-- Followed by article sections -->
+<section class="postShorten-group main-content-wrap">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+...
+```
+The “emsp” adds white spaces before texts. In html, "nbsp"  adds a single space, "ensp" adds 2 spaces, "emsp" adds 4 spaces. And to get a tab, use "nbsp" four times.<br>
+I also inserted a few [Font Awesome](https://www.w3schools.com/icons/fontawesome_icons_intro.asp) icons, just for fun. 
 

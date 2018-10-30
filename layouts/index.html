@@ -9,21 +9,21 @@
         class="{{ with .Params.coverimage }}hasCover{{ end }}
                {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
                {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
-        <article class="postShorten postShorten--thumbnailimg-top" itemscope itemType="http://schema.org/BlogPosting">
+        <section class="postShorten-group main-content-wrap">
             <div class="postShorten-wrap">
             <div class="postShorten-header">
             <h1 class="postShorten-title" itemprop="headline">
-              &emsp;&emsp;Welcome! 欢迎
+              Welcome! 欢迎
             </h1>
             </div>
             <div class="postShorten-excerpt" itemprop="articleBody">
-                 <p>&emsp;&emsp;&emsp;Welcome to my personal blog.<br>&emsp;&emsp;&emsp;欢迎访问我的博客。<br>
-                 &emsp;&emsp;&emsp;<a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
+                 <p>Welcome to my personal blog.<br>欢迎访问我的博客。<br>
+                 <a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a>&emsp;&emsp;
                  <a href="/page/projects/"><i class="fa fa-tasks"></i> My projects</a>   
                  </p>
             </div>
             </div> 
-        </article>
+        </section>
         <section class="postShorten-group main-content-wrap">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
