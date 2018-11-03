@@ -81,7 +81,7 @@ print "Postorder => Preorder"
 for key,val in Postorder.items():
     print val, "\t", Preorder[str(key)]
 {{< /codeblock >}}
-Usage:`python postorder.py tree.tre 5`<br>
+Usage:`python internalnodes_postorder_preorder.py tree.tre 5`<br>
 where `tree.tre` contains the tree file in newick format: `((A,B),(C,(D,E)));` and `5` is the number of species(tips) in the tree.<br>
 The output of the python script will look like the following:
 ```
