@@ -63,9 +63,9 @@ Similarly, we will customize another shortcode for Tencent videos, and upload it
 	<iframe width="560" height="315" src="https://v.qq.com/iframe/player.html?vid={{ index .Params "id" }}" frameborder="0" allowfullscreen="true"></iframe>
 </div>
 {{< /codeblock >}}
-
 Then we can embed a Tencent [video](https://v.qq.com/x/page/b0846uzr9sq.html) (`https://v.qq.com/x/page/{{< hl-text red >}}b0846uzr9sq{{< /hl-text >}}.html`) with the following code:
 ![](https://i.imgur.com/2XQ4sm3.jpg)
+
 Tencent video:
 {{< tencent id="b0846uzr9sq" autoplay="false">}}
 
