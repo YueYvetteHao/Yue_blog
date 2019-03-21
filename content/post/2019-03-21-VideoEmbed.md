@@ -64,7 +64,7 @@ Similarly, we will customize another shortcode for Tencent videos, and upload it
 </div>
 {{< /codeblock >}}
 
-Then we can embed a Tencent [video](http://v.qq.com/x/page/b0846uzr9sq.html) (`http://v.qq.com/x/page/{{< hl-text red >}}b0846uzr9sq{{< /hl-text >}}.html`) with the following code:
+Then we can embed a Tencent [video](https://v.qq.com/x/page/b0846uzr9sq.html) (`https://v.qq.com/x/page/{{< hl-text red >}}b0846uzr9sq{{< /hl-text >}}.html`) with the following code:
 ![](https://i.imgur.com/2XQ4sm3.jpg)
 Tencent video:
 {{< tencent id="b0846uzr9sq" autoplay="false">}}
