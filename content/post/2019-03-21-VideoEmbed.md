@@ -35,7 +35,7 @@ And the embeded video will look like the following:
 {{< youtube id="1PQ-qpPVIJo" autoplay="false" >}}
 
 
-# 优酷视频
+# 优酷视频 Youku
 
 In order to embed video players from a different source, we will need to customize a shortcode and upload it in the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder.<br>
 For example, the following html file will enable us to embed Youku video players on the website:
@@ -55,7 +55,7 @@ Then, a video player for Youku is embeded:
 {{< youku id="XMzY5MTQxNjIwMA==" autoplay="false" >}}
 
 
-# 腾讯视频
+# 腾讯视频 Tencent
 
 Similarly, we will customize another shortcode for Tencent videos, and upload it to the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder:
 {{< codeblock "tencent.html" "xml" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/shortcodes/tencent.html">}}
