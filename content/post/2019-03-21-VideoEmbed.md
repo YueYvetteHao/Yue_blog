@@ -12,7 +12,7 @@ comments: true
 showSocial: true
 ---
 
-This blog is about how to embed video players on webpages hosted by [Hugo](https://gohugo.io/content-management/shortcodes/).
+This blog post is about how to embed video players on webpages hosted by [Hugo](https://gohugo.io/content-management/shortcodes/).
 <!--more-->
 
 <!-- toc -->
@@ -58,7 +58,7 @@ Then, a video player for Youku is embeded:
 # 腾讯视频
 
 Similarly, we will customize another shortcode for Tencent videos, and upload it to the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder:
-{{< codeblock "tencent.html" "xml" "">}}
+{{< codeblock "tencent.html" "xml" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/shortcodes/tencent.html">}}
 <div class="embed-container">
 	<iframe width="560" height="315" src="http://v.qq.com/iframe/player.html?vid={{ index .Params "id" }}" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -66,7 +66,8 @@ Similarly, we will customize another shortcode for Tencent videos, and upload it
 
 Then we can embed a Tencent [video](http://v.qq.com/x/page/b0846uzr9sq.html) (`http://v.qq.com/x/page/{{< hl-text red >}}b0846uzr9sq{{< /hl-text >}}.html`) with the following code:
 ![](https://i.imgur.com/2XQ4sm3.jpg)
-
+Tencent video:
+{{< tencent id="b0846uzr9sq" autoplay="false">}}
 
 
 
