@@ -6,6 +6,7 @@ categories:
 tags:
 - website
 - markdown
+- html
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/1rkZsrr.png
 comments: true
