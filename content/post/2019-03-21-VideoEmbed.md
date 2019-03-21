@@ -60,7 +60,7 @@ Then, a video player for Youku is embeded:
 Similarly, we will customize another shortcode for Tencent videos, and upload it to the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder:
 {{< codeblock "tencent.html" "xml" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/shortcodes/tencent.html">}}
 <div class="embed-container">
-	<iframe width="560" height="315" src="http://v.qq.com/iframe/player.html?vid={{ index .Params "id" }}" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="http://v.qq.com/txp/iframe/player.html?vid={{ index .Params "id" }}" frameborder="0" allowfullscreen></iframe>
 </div>
 {{< /codeblock >}}
 
