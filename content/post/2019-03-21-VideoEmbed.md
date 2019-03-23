@@ -38,7 +38,7 @@ And the embeded video will look like the following:
 
 # 优酷视频 Youku
 
-In order to embed video players from a different source, we will need to customize a shortcode and upload it in the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder.<br>
+In order to embed video players from a different source, we will need to customize a shortcode and upload it in the {{< hl-text orange >}}/layouts/shortcodes{{< /hl-text >}} folder.<br>
 For example, the following html file will enable us to embed Youku video players on the website:
 {{< codeblock "youku.html" "xml" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/shortcodes/youku.html">}}
 <div class="embed-container">
@@ -58,7 +58,7 @@ Then, a video player for Youku is embeded:
 
 # 腾讯视频 Tencent
 
-Similarly, we will customize another shortcode for Tencent videos, and upload it to the {{< hl-text orange >}}/layouts/shortocdes{{< /hl-text >}} folder:
+Similarly, we will customize another shortcode for Tencent videos, and upload it to the {{< hl-text orange >}}/layouts/shortcodes{{< /hl-text >}} folder:
 {{< codeblock "tencent.html" "xml" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/shortcodes/tencent.html">}}
 <div class="embed-container">
 	<iframe width="560" height="315" src="https://v.qq.com/iframe/player.html?vid={{ index .Params "id" }}" frameborder="0" allowfullscreen="true"></iframe>
