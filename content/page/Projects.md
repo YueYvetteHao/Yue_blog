@@ -13,9 +13,12 @@ I am studying the molecular evolution of post-polyploidization *Brassica* specie
 Status: statistically modeling preferentially gene retention after the paleopolyploidy events in the
 tribe Brassiceae
 {{< /alert >}}
+
 Papers:<br>
 **Hao Y**, Washburn JD, Rosenthal J, Nielsen B, Lyons E, Edger PP, Pires JC and Conant GC. 2018. [Patterns of population variation in two paleopolyploid eudicot lineages suggest that dosage-based selection on homeologs is long-lived](https://academic.oup.com/gbe/article/10/3/999/4943970). *Genome Biol Evol* **10**(3):999-1011<br>
+
 Emery M, Willis MS, **Hao Y**, Barry K, Oakgrove K, Peng Y, Schmutz J, Lyons E, Pires JC, Edger PP and Conant GC. 2018. [Preferential retention of genes from one parental genome after polyploidy illustrates the nature and scope of the genomic conflicts induced by hybridization](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007267). *PLoS Genet* **14**(3):e1007267<br>
+
 An H, Qi X, Gaynor ML, **Hao Y**, Gebken SC, Mabry ME, McAlvay AC, Teakle GR, Conant GC, Barker MS, Fu T, Yi B and Pires JC. 2019. [Transcriptome and organellar genome sequencing elucidates the origin and diversification of allotetraploid *Brassica napus*](https://www.nature.com/articles/s41467-019-10757-1). *Nat Commun* **10**(1):2878<br>
 ### Mammalian genome evolution
 Baby Genomics: tracing the evolutionary changes that gave rise to placentation.<br>
