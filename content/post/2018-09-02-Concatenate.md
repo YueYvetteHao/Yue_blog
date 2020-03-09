@@ -2,9 +2,9 @@
 title: "Using Biopython to concatenate (aligned) sequences with the same name"
 date: 2018-09-02
 categories:
-- study_notes
-- python
+- blog
 tags:
+- python
 - Biopython
 - fasta
 - alignment

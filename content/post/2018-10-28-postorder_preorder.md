@@ -2,9 +2,9 @@
 title: "Traversing nodes in a phylogenetic tree"
 date: 2018-10-28
 categories:
-- study_notes
-- python
+- blog
 tags:
+- python
 - tree traversal
 - phylogeny
 thumbnailImagePosition: left

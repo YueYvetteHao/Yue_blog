@@ -45,40 +45,35 @@ canonifyurls = true
   url = "/"
 [[menu.main]]
   weight = 2
-  identifier = "about"
-  name = "About"
+  identifier = "cv"
+  name = "CV"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-smile-o\"></i>"
-  url = "/page/about"
+  url = "/files/YueHao_cv_2020.pdf"
 [[menu.main]]
   weight = 3
-  identifier = "projects"
-  name = "Projects"
+  identifier = "research"
+  name = "Research"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tasks\"></i>"
-  url = "/page/projects"
+  url = "/2020/01/research-projects/"
 [[menu.main]]
   weight = 4
-  identifier = "categories"
-  name = "Categories"
+  identifier = "portfolio"
+  name = "Portfolio"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
-  url = "/categories"
+  url = "/categories/portfolio"
 [[menu.main]]
   weight = 5
-  identifier = "archives"
-  name = "Archives"
+  identifier = "blog"
+  name = "Blog"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
-  url = "/archives"
+  url = "/categories/blog"
 [[menu.main]]
   weight = 6
-  identifier = "tags"
-  name = "Tags"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
-  url = "/tags"
-[[menu.main]]
-  weight = 7
   identifier = "chinese"
   name = "中文"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-language\"></i>"
   url = "/tags/Chinese/"
+
 
 [[menu.links]]
   weight = 1

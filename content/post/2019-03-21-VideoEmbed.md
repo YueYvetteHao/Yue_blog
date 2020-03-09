@@ -2,7 +2,7 @@
 title: "How to embed videos on website"
 date: 2019-03-21
 categories:
-- website
+- blog
 tags:
 - website
 - markdown

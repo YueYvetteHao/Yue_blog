@@ -2,9 +2,9 @@
 title: "Parsing nested XML files"
 date: 2018-10-05
 categories:
-- study_notes
-- python
+- blog
 tags:
+- python
 - xml
 thumbnailImagePosition: left
 thumbnailImage: https://i.imgur.com/eNyhevp.jpg
