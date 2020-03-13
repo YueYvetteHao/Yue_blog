@@ -54,13 +54,13 @@ canonifyurls = true
   identifier = "research"
   name = "Research"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tasks\"></i>"
-  url = "/2020/01/research-projects/"
+  url = "/categories/research"
 [[menu.main]]
   weight = 4
-  identifier = "portfolio"
-  name = "Portfolio"
+  identifier = "teaching"
+  name = "Teaching"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
-  url = "/categories/portfolio"
+  url = "/categories/teaching"
 [[menu.main]]
   weight = 5
   identifier = "blog"

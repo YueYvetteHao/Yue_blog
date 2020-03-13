@@ -1,4 +1,22 @@
 {{ partial "head.html" . }}
+<head>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<style>
+.row {
+  display: flex;
+}
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+ /*  height: 300px; Should be removed. Only for demonstration */
+}
+</style>
+</head>
+
+
+
+
   <body>
     <div id="blog">
       {{ partial "header.html" . }}
@@ -17,22 +35,32 @@
               Welcome! 欢迎
             </h1>
             </div>
-            <div class="postShorten-excerpt" itemprop="articleBody">
-                 <p>Welcome to my personal website.<br>欢迎访问我的网站。<br>
+
+            <div class="row">
+             <!-- <div class="postShorten-excerpt" itemprop="articleBody">--> 
+             <div class="column" >
+                 <p>Welcome to my personal website.<br>欢迎访问我的网站。<br><br>
+                  I am a Bioinformatics PhD Candidate at North Carolina State University. My research focuses on how ancient
+                  polyploidy shaped the evolution of today's organisms.<br><br>
                  <a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a> <!--&emsp;&emsp;
                  <a href="/page/projects/"><i class="fa fa-tasks"></i> My projects</a>  -->  
                  </p>
+              </div>
+               <div class="column" >
+                  <img src="https://i.imgur.com/Q24tm9l.jpg" alt="Yue" width="266" height="400">
+                </div>
             </div>
+
             </div> 
         </section>
-     
+        <!--
         <section class="postShorten-group main-content-wrap">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
             {{ .Render "summary" }}
           {{ end }}
           {{ partial "pagination.html" . }}
-        </section>
+        </section>--> 
         {{ partial "footer.html" . }}
       </div>
     </div>
