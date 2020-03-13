@@ -1,7 +1,8 @@
 {{ partial "head.html" . }}
 <head>
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-<style>
+  <style>
+
 .row {
   display: flex;
 }
@@ -11,7 +12,7 @@
   padding: 10px;
  /*  height: 300px; Should be removed. Only for demonstration */
 }
-</style>
+  </style>
 </head>
 
 
@@ -47,13 +48,13 @@
                  </p>
               </div>
                <div class="column" >
-                  <img src="https://i.imgur.com/Q24tm9l.jpg" alt="Yue" width="266" height="400">
+                  <img src="https://i.imgur.com/Q24tm9l.jpg" alt="Yue" width=100%>
                 </div>
             </div>
 
             </div> 
         </section>
-        <!--
+        <!--width="266" height="400"
         <section class="postShorten-group main-content-wrap">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
