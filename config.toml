@@ -48,7 +48,7 @@ canonifyurls = true
   identifier = "cv"
   name = "CV"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-smile-o\"></i>"
-  url = "/files/YueHao_cv_2020.pdf"
+  url = "/2020/01/curriculum-vitae/"
 [[menu.main]]
   weight = 3
   identifier = "research"
