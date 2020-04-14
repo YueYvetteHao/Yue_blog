@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-date: 2020-01-23
+date: 2020-04-15
 categories:
 - portfolio
 tags:

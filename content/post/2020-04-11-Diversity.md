@@ -1,6 +1,6 @@
 ---
-title: "Research Statement"
-date: 2020-01-21
+title: "Diversity Statement"
+date: 2020-04-11
 categories:
 - portfolio
 - research

@@ -48,7 +48,7 @@ canonifyurls = true
   identifier = "cv"
   name = "CV"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-smile-o\"></i>"
-  url = "/2020/01/curriculum-vitae/"
+  url = "/2020/04/curriculum-vitae/"
 [[menu.main]]
   weight = 3
   identifier = "research"
@@ -59,13 +59,13 @@ canonifyurls = true
   weight = 4
   identifier = "teaching"
   name = "Teaching"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-television\"></i>"
   url = "/categories/teaching"
 [[menu.main]]
   weight = 5
   identifier = "blog"
   name = "Blog"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-puzzle-piece\"></i>"
   url = "/categories/blog"
 [[menu.main]]
   weight = 6
