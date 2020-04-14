@@ -3,7 +3,7 @@ title: "Diversity Statement"
 date: 2020-04-10
 categories:
 - portfolio
-- research
+- teaching
 tags:
 - portfolio
 comments: false
