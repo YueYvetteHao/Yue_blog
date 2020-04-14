@@ -23,8 +23,8 @@ canonifyurls = true
 
 [author]
   name = "Yue Hao"
-  bio = "**Serious broccoli**"
-  job = "PhD candidate"
+  bio = "**Bioinformatics • Molecular Evolution Polyploidy • Genomics**"
+  job = "Bioinformatics PhD"
   location = "NC State"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "haoyuethink@gmail.com"
