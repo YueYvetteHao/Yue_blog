@@ -54,7 +54,7 @@ canonifyurls = true
   identifier = "research"
   name = "Research"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tasks\"></i>"
-  url = "/categories/research"
+  url = "/2020/04/research-projects/"
 [[menu.main]]
   weight = 4
   identifier = "teaching"
@@ -63,12 +63,18 @@ canonifyurls = true
   url = "/categories/teaching"
 [[menu.main]]
   weight = 5
+  identifier = "statements"
+  name = "Statements"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-file-text\"></i>"
+  url = "/categories/statement"
+[[menu.main]]
+  weight = 6
   identifier = "blog"
   name = "Blog"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-puzzle-piece\"></i>"
   url = "/categories/blog"
 [[menu.main]]
-  weight = 6
+  weight = 7
   identifier = "chinese"
   name = "中文"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-language\"></i>"
