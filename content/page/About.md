@@ -7,7 +7,7 @@ showActions:    false
 [🏠Home](https://yueyvettehao.netlify.com/)
 ## Education
 **Ph.D. in Bioinformatics**
-<br>May 2020 (expected) <br>
+<br>May 2020<br>
 Advisor: [Dr. Gavin Conant](http://conantlab.org)<br>
 North Carolina State University (NCSU), Raleigh NC, USA<br>
 **M.S. in Biological Engineering**
