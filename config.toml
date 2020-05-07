@@ -1,7 +1,7 @@
 # Theme: Tranquilpeak (Thibaud Leprêtre)
 
 # baseURL = "https://yueyvettehao.github.io/"
-baseURL = "https://yueyvettehao.netlify.com/"
+baseURL = "https://yueyvettehao.netlify.app/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Yue Hao 郝樾"
@@ -56,13 +56,13 @@ disableKinds = ["section"]
   identifier = "cv"
   name = "CV"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-smile-o\"></i>"
-  url = "https://yueyvettehao.netlify.app/2020/04/curriculum-vitae/"
+  url = "/post/2020-04-14-curriculumvitae/"
 [[menu.main]]
   weight = 3
   identifier = "research"
   name = "Research"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tasks\"></i>"
-  url = "https://yueyvettehao.netlify.app/2020/04/research-projects/"
+  url = "/post/2020-04-13-projects/"
 [[menu.main]]
   weight = 4
   identifier = "teaching"
