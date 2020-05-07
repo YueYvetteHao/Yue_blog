@@ -13,6 +13,7 @@
  /*  height: 300px; Should be removed. Only for demonstration */
 }
   </style>
+
 </head>
 
 
@@ -22,13 +23,14 @@
     <div id="blog">
       {{ partial "header.html" . }}
       {{ partial "sidebar.html" . }}
-      {{ partial "post/header-cover.html" . }}
+    
+
 
       <div id="main" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}"
         class="{{ with .Params.coverimage }}hasCover{{ end }}
                {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
                {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
-     
+
         <section class="postShorten-group main-content-wrap">
             <div class="postShorten-wrap">
             <div class="postShorten-header">
@@ -41,7 +43,7 @@
              <!-- <div class="postShorten-excerpt" itemprop="articleBody">--> 
              <div class="column" >
                  <p>Welcome to my personal website.<br>欢迎访问我的网站。<br><br>
-                  I obtained my PhD in Bioinformatics from North Carolina State University. My research focuses on how ancient
+                  I obtained my PhD in Bioinformatics from North Carolina State University in 2020. My research focuses on how ancient
                   polyploidy shaped the evolution of today's organisms.<br><br>
                  <h3><a href="/page/about/"><i class="fa fa-smile-o"></i> About me</a></h3><!-- &emsp;&emsp; -->
                  <h3><a href="/tags/portfolio/"><i class="fa fa-book"></i> Portfolio</a></h3>  
@@ -62,6 +64,9 @@
           {{ end }}
           {{ partial "pagination.html" . }}
         </section>--> 
+
+        {{ partial "calendar" (dict "context" . "from" 2020 "fromMonth" 1 "to" (now.Format "2006") "toMonth" (now.Format "1") "pages" .Site.Pages) }}
+
         {{ partial "footer.html" . }}
       </div>
     </div>

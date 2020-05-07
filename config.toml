@@ -13,13 +13,21 @@ googleAnalytics = "UA-125119699-2"
 paginate = 8
 canonifyurls = true
 
+
+# prevent hugo from creating folders/indexes for each section
+disableKinds = ["section"]
+
+
 [permalinks]
-  post = "/:year/:month/:slug/"
+  # :title is used if :slug is not defined in post frontmatter
+  posts = "/:year/:month/:slug/"
+  archm = "/:year/:month/"
+  archy = "/:year/"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
-  archive = "archives"
+  archive = "archive"
 
 [author]
   name = "Yue Hao"
@@ -48,13 +56,13 @@ canonifyurls = true
   identifier = "cv"
   name = "CV"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-smile-o\"></i>"
-  url = "/2020/04/curriculum-vitae/"
+  url = "https://yueyvettehao.netlify.app/2020/04/curriculum-vitae/"
 [[menu.main]]
   weight = 3
   identifier = "research"
   name = "Research"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tasks\"></i>"
-  url = "/2020/04/research-projects/"
+  url = "https://yueyvettehao.netlify.app/2020/04/research-projects/"
 [[menu.main]]
   weight = 4
   identifier = "teaching"
@@ -79,7 +87,6 @@ canonifyurls = true
   name = "中文"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-language\"></i>"
   url = "/tags/Chinese/"
-
 
 [[menu.links]]
   weight = 1
@@ -186,8 +193,8 @@ canonifyurls = true
 
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
-  # [[params.customCSS]]
-  #   href = "css/mystyle.css"
+   [[params.customCSS]]
+     href = "css/style.css"
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
   # they have to be referred from static root. Example

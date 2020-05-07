@@ -1,6 +1,7 @@
 ---
 title: "Diversity Statement"
-date: 2020-04-10
+date: 2020-04-10T21:27:05.454Z
+archive: ["2020","2020-04","2020-04-10"]
 categories:
 - portfolio
 - statement

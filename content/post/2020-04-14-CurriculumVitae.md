@@ -1,6 +1,7 @@
 ---
 title: "Curriculum Vitae"
-date: 2020-04-14
+date: 2020-04-14T21:27:05.454Z
+archive: ["2020","2020-04","2020-04-14"]
 categories:
 - portfolio
 tags:
