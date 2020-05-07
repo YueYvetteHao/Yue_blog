@@ -14,7 +14,7 @@ comments: true
 showSocial: true
 ---
 
-Today I tadded a calendar to my website, and I was inspired by these two blog posts: [Activity Calendar Partial](https://gohugohq.com/partials/activity-calendar-posts/) and [Generate Yearly and Monthly Archive Pages with Hugo Sections](https://blog.atj.me/2017/10/generate-yearly-and-monthly-archive-pages-with-hugo-sections/).
+Today I added a calendar to my website, and I was inspired by these two blog posts: [Activity Calendar Partial](https://gohugohq.com/partials/activity-calendar-posts/) and [Generate Yearly and Monthly Archive Pages with Hugo Sections](https://blog.atj.me/2017/10/generate-yearly-and-monthly-archive-pages-with-hugo-sections/).
 
 <!--more-->
 
