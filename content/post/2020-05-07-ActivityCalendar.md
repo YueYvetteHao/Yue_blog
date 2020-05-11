@@ -166,7 +166,7 @@ Call the calendar partial in the {{< hl-text orange >}}layouts/index.html{{< /hl
 {{ partial "calendar" (dict "context" . "from" 2020 "fromMonth" 1 "to" (now.Format "2006") "toMonth" (now.Format "1") "pages" .Site.Pages) }}
 ```
 
-Now the calendar should be visable on the website! Pretty awesome. Check out a [live demo](https://cgmonline.co/calendar/).
+Now the calendar should be visible on the website! Pretty awesome. Check out a [live demo](https://cgmonline.co/calendar/).
 
 # Issues and solution
 
