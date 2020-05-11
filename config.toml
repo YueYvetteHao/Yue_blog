@@ -20,7 +20,7 @@ disableKinds = ["section"]
 
 [permalinks]
   # :title is used if :slug is not defined in post frontmatter
-  posts = "/:year-:month-:slug/"
+  posts = "/:year/:month/:slug/"
 
 [taxonomies]
   tag = "tags"

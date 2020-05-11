@@ -41,6 +41,8 @@ Here are the partial files I created in the {{< hl-text orange >}}layouts/partia
 {{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post. However, I modified the  {{< hl-text primary >}}calendar.html{{< /hl-text >}} file slightly, changing `.GroupByPublishDate` to `.GroupByDate`:
 ```
 {{ range ($pages.GroupByPublishDate "2006") }}
+{{ range ($pages.GroupByPublishDate "2006-01") }}
+{{ range ($pages.GroupByPublishDate "2006-01-02") }}
 # Change to .GroupByDate
 ```
 
@@ -107,7 +109,6 @@ disableKinds = ["section"]
 Then I created a layout file {{< hl-text primary >}}archive.html{{< /hl-text >}} to {{< hl-text orange >}}layouts/taxonomy/{{< /hl-text >}} folder.
 {{< codeblock "/layouts/taxonomy/archive.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/taxonomy/archive.html">}}
 {{ partial "head.html" . }}
-{{ partial "head.html" . }}
   <body>
     <div id="blog">
       {{ partial "header.html" . }}
@@ -155,6 +156,7 @@ For hugo to reconize customized css files, toggle the customCSS option in {{< hl
    [[params.customCSS]]
      href = "css/style.css"
 ```
+{{< alert info >}} If your website is already using a custom css, simple copy and paste the code for calendar styling into the custom css file. {{< /alert >}} 
 
 # Add the calendar to the frontpage
 
@@ -165,3 +167,39 @@ Call the calendar partial in the {{< hl-text orange >}}layouts/index.html{{< /hl
 ```
 
 Now the calendar should be visable on the website! Pretty awesome.
+
+# Issues and solution
+
+{{< alert warning >}} Issue 1: the background circles for 'calendar days with articles' and 'today' are now showing. {{< /alert >}}
+Hugo websites with themes such as [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) and [XMag](https://themes.gohugo.io/hugo-xmag/) display this issue when rendering the calendar.
+{{< alert success >}} Solution: {{< /alert >}}
+In the {{< hl-text primary >}}/static/css/style.css{{< /hl-text >}} file, add `opacity: 0.9` under `.calendar-day.calendar-day-has-articles` and `.calendar-day.calendar-day-is-today`. 
+```
+.calendar-day.calendar-day-has-articles {
+  color: #ffffff;
+  position: relative;
+  opacity: 0.9;
+}
+.calendar-day.calendar-day-is-today {
+  position: relative;
+  font-weight: 800;
+  color: #ff6600;
+  opacity: 0.9;
+}
+```
+Also move `.calendar-day.calendar-day-future { opacity: 0.4; } ` to the bottom of the file so that background opacity for future dates renders the last.
+
+{{< alert warning >}} Issue 2: links to categories and tags are not working after adding the calendar to the website. {{< /alert >}}
+Hugo websites with theme [XMag](https://themes.gohugo.io/hugo-xmag/) may have this problem.
+{{< alert success >}} Solution: {{< /alert >}}
+Make sure that the desired taxonomy terms are all included in the {{< hl-text primary >}}config.toml{{< /hl-text >}} file.
+```
+[taxonomies]
+  archive = "archive"
+  tag = "tags"
+  category = "categories"
+```
+
+{{< alert warning >}} Issue 3: the paginators (both `Prev` and `Next`) were broken after adding calendar. {{< /alert >}}
+Hugo websites with theme [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) may have this problem.
+{{< alert info >}} Solution coming soon. {{< /alert >}}
