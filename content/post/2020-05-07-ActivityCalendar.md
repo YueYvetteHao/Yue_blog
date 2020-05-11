@@ -170,7 +170,7 @@ Now the calendar should be visable on the website! Pretty awesome.
 
 # Issues and solution
 
-{{< alert warning >}} Issue 1: the background circles for 'calendar days with articles' and 'today' are now showing. {{< /alert >}}
+{{< alert warning >}} Issue 1: The background circles for 'calendar days with articles' and 'today' are now showing. {{< /alert >}}
 Hugo websites with themes such as [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) and [XMag](https://themes.gohugo.io/hugo-xmag/) display this issue when rendering the calendar.
 {{< alert success >}} Solution: {{< /alert >}}
 In the {{< hl-text primary >}}/static/css/style.css{{< /hl-text >}} file, add `opacity: 0.9` under `.calendar-day.calendar-day-has-articles` and `.calendar-day.calendar-day-is-today`. 
@@ -187,9 +187,9 @@ In the {{< hl-text primary >}}/static/css/style.css{{< /hl-text >}} file, add `o
   opacity: 0.9;
 }
 ```
-Also move `.calendar-day.calendar-day-future { opacity: 0.4; } ` to the bottom of the file so that background opacity for future dates renders the last.
+Also move `.calendar-day.calendar-day-future { opacity: 0.4; } ` to the bottom of the file so that the opacity for future dates renders the last.
 
-{{< alert warning >}} Issue 2: links to categories and tags are not working after adding the calendar to the website. {{< /alert >}}
+{{< alert warning >}} Issue 2: Links to categories and tags are not working after adding the calendar to the website. {{< /alert >}}
 Hugo websites with theme [XMag](https://themes.gohugo.io/hugo-xmag/) may have this problem.
 {{< alert success >}} Solution: {{< /alert >}}
 Make sure that the desired taxonomy terms are all included in the {{< hl-text primary >}}config.toml{{< /hl-text >}} file.
@@ -200,6 +200,6 @@ Make sure that the desired taxonomy terms are all included in the {{< hl-text pr
   category = "categories"
 ```
 
-{{< alert warning >}} Issue 3: the paginators (both `Prev` and `Next`) were broken after adding calendar. {{< /alert >}}
+{{< alert warning >}} Issue 3: The paginators (both `Prev` and `Next`) were broken after adding calendar. {{< /alert >}}
 Hugo websites with theme [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) may have this problem.
 {{< alert info >}} Solution coming soon. {{< /alert >}}
