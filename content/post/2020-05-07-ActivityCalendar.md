@@ -98,9 +98,6 @@ The idea is to archive blog posts by date and users can click on the date on the
 
 In the configuration file {{< hl-text primary >}}config.toml{{< /hl-text >}}, add:
 ```
-# prevent hugo from creating folders/indexes for each section
-disableKinds = ["section"]
-
 # adding taxonomy term 'archive'
 [taxonomies]
     archive = "archive"
@@ -199,7 +196,3 @@ Make sure that the desired taxonomy terms are all included in the {{< hl-text pr
   tag = "tags"
   category = "categories"
 ```
-
-{{< alert warning >}} Issue 3: The paginators (both `Prev` and `Next`) were broken after adding calendar. {{< /alert >}}
-Hugo websites with theme [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) may have this problem.
-{{< alert info >}} Solution coming soon. {{< /alert >}}

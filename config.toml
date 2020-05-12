@@ -10,17 +10,18 @@ theme = "hugo-tranquilpeak-theme"
 disqusShortname = "https-yueyvettehao-netlify-com"
 # googleAnalytics = "UA-125119699-1"
 googleAnalytics = "UA-125119699-2"
-paginate = 8
+paginate = 7
 canonifyurls = true
 
 
 # prevent hugo from creating folders/indexes for each section
-disableKinds = ["section"]
+# disableKinds = ["section"]
 
 
 [permalinks]
   # :title is used if :slug is not defined in post frontmatter
-  posts = "/:year/:month/:slug/"
+    posts = "/:year/:month/:slug/"
+
 
 [taxonomies]
   tag = "tags"
