@@ -50,35 +50,13 @@ In {{< hl-text primary >}}calendar.html{{< /hl-text >}} under `{{ range ($pages.
     {{ end }}
 {{ end }}
 ```
-Then edit {{< hl-text primary >}}day.html{{< /hl-text >}}:
-{{< codeblock "day.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/partials/calendar/day.html">}}
-{{ $context := .context }}
-{{ $year := .year }}
-{{ $pages := .pages }}
-
-{{ $day := .day }}
-{{ $dayTwoLetters := printf "%02d" $day }}
-{{ $pageMap := .pagemap }}
-
-{{ $month := .month }}
-{{ $monthTwoLetters := printf "%02d" $month }}
-
-{{ $dateString := (string (delimit (slice $year $monthTwoLetters $dayTwoLetters) "-")) }}
-
+Then edit {{< hl-text primary >}}day.html{{< /hl-text >}}, add these lines:
+```
 {{ $link := $context.Scratch.Get $dateString  }}
 
-{{ $context.Scratch.Set "isFuture" false }}
-
-{{ if le now (time $dateString) }}
-    {{ $context.Scratch.Set "isFuture" true }}
-{{ end }}
-
-{{ $isFuture := $context.Scratch.Get "isFuture" }}
-
-{{- $articlesFound := index ($context.Scratch.Get "ArticlesPerDay") $dateString -}}
 <li class="calendar-day {{ if $isFuture }}calendar-day-future{{ end }} {{ if gt $articlesFound 0 }}calendar-day-has-articles{{ end }} {{ if eq (now.Format "2006-01-02") $dateString }}calendar-day-is-today{{ end }}">
     {{- if eq $articlesFound 1 -}} <!-- exactly one article that day -->
-        <a href="{{ $link }}">
+        <a href="{{ $link }}" title="{{ $articlesFound }} article">
         <time datetime="{{ $dateString }}">{{ $day }}<em>{{ $articlesFound }}</em></time></a>
     {{- else if gt $articlesFound 1 -}} <!-- multiple articles on one day -->
         <a href="/archive/{{ delimit (slice $year $monthTwoLetters $dayTwoLetters) "-" }}/" title="{{ $articlesFound }} article{{ if gt $articlesFound 1 }}s{{ end }}">
@@ -87,7 +65,7 @@ Then edit {{< hl-text primary >}}day.html{{< /hl-text >}}:
         <time datetime="{{ $dateString }}">{{ $day }}<em>{{ $articlesFound }}</em></time>
     {{- end -}}
 </li>
-{{< /codeblock >}}
+```
 
 The code for three types of listing (by year, month or day) were partly adapted from templates provided in [Generate Yearly and Monthly Archive Pages with Hugo Sections](https://blog.atj.me/2017/10/generate-yearly-and-monthly-archive-pages-with-hugo-sections/).
 {{< codeblock "archy.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/partials/archy.html">}}
