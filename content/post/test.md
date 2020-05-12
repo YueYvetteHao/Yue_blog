@@ -1,6 +1,6 @@
 ---
-title: "How to add a calendar to Hugo website"
-date: 2020-05-07T17:15:22.000Z
+title: "Test Test"
+date: 2020-05-07T21:15:22.000Z
 archive: ["2020","2020-05","2020-05-07"]
 categories:
 - blog
@@ -22,7 +22,7 @@ Today I added a calendar to my website, and I was inspired by these two blog pos
 
 # Partials file structure
 
-Here are the [partial](https://gohugo.io/templates/partials/) files I created in the {{< hl-text orange >}}layouts/partials/{{< /hl-text >}} folder and they were organized in the following structure.
+Here are the partial files I created in the {{< hl-text orange >}}layouts/partials/{{< /hl-text >}} folder and they were organized in the following structure.
 
 ```
 |-- layouts
@@ -38,56 +38,7 @@ Here are the [partial](https://gohugo.io/templates/partials/) files I created in
 |  |  |-- post
 |  |  |  |-- archive.html
 ```
-{{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post. 
-However, I edited the {{< hl-text primary >}}calendar.html{{< /hl-text >}} and {{< hl-text primary >}}day.html{{< /hl-text >}} files to allow users to click on the dates in the calendar and go directly to the article (if there was only one article posted on that day).
-
-In {{< hl-text primary >}}calendar.html{{< /hl-text >}} under `{{ range ($pages.GroupByPublishDate "2006-01-02") }}`, add:
-```
-{{ range ($pages.GroupByPublishDate "2006-01-02") }}
-    {{ $context.Scratch.SetInMap "ArticlesPerDay" .Key (len .Pages) }}
-    {{ range .Pages }}
-        {{ $context.Scratch.Set (.PublishDate.Format "2006-01-02") .Permalink }}
-    {{ end }}
-{{ end }}
-```
-Then edit {{< hl-text primary >}}day.html{{< /hl-text >}}:
-{{< codeblock "day.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/partials/calendar/day.html">}}
-{{ $context := .context }}
-{{ $year := .year }}
-{{ $pages := .pages }}
-
-{{ $day := .day }}
-{{ $dayTwoLetters := printf "%02d" $day }}
-{{ $pageMap := .pagemap }}
-
-{{ $month := .month }}
-{{ $monthTwoLetters := printf "%02d" $month }}
-
-{{ $dateString := (string (delimit (slice $year $monthTwoLetters $dayTwoLetters) "-")) }}
-
-{{ $link := $context.Scratch.Get $dateString  }}
-
-{{ $context.Scratch.Set "isFuture" false }}
-
-{{ if le now (time $dateString) }}
-    {{ $context.Scratch.Set "isFuture" true }}
-{{ end }}
-
-{{ $isFuture := $context.Scratch.Get "isFuture" }}
-
-{{- $articlesFound := index ($context.Scratch.Get "ArticlesPerDay") $dateString -}}
-<li class="calendar-day {{ if $isFuture }}calendar-day-future{{ end }} {{ if gt $articlesFound 0 }}calendar-day-has-articles{{ end }} {{ if eq (now.Format "2006-01-02") $dateString }}calendar-day-is-today{{ end }}">
-    {{- if eq $articlesFound 1 -}} <!-- exactly one article that day -->
-        <a href="{{ $link }}">
-        <time datetime="{{ $dateString }}">{{ $day }}<em>{{ $articlesFound }}</em></time></a>
-    {{- else if gt $articlesFound 1 -}} <!-- multiple articles on one day -->
-        <a href="/archive/{{ delimit (slice $year $monthTwoLetters $dayTwoLetters) "-" }}/" title="{{ $articlesFound }} article{{ if gt $articlesFound 1 }}s{{ end }}">
-        <time datetime="{{ $dateString }}">{{ $day }}<em>{{ $articlesFound }}</em></time></a>
-    {{- else -}} <!-- no articles that day -->
-        <time datetime="{{ $dateString }}">{{ $day }}<em>{{ $articlesFound }}</em></time>
-    {{- end -}}
-</li>
-{{< /codeblock >}}
+{{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post.
 
 The code for three types of listing (by year, month or day) were partly adapted from templates provided in [Generate Yearly and Monthly Archive Pages with Hugo Sections](https://blog.atj.me/2017/10/generate-yearly-and-monthly-archive-pages-with-hugo-sections/).
 {{< codeblock "archy.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/partials/archy.html">}}
@@ -146,8 +97,7 @@ In the configuration file {{< hl-text primary >}}config.toml{{< /hl-text >}}, ad
     archive = "archive"
 ```
 
-Then I created a layout file {{< hl-text primary >}}archive.html{{< /hl-text >}} to {{< hl-text orange >}}layouts/taxonomy/{{< /hl-text >}} folder.<br>
-Here I used a Hugo function [findRE](https://gohugo.io/functions/findre/), which returns a list of strings that match the given regular expression.
+Then I created a layout file {{< hl-text primary >}}archive.html{{< /hl-text >}} to {{< hl-text orange >}}layouts/taxonomy/{{< /hl-text >}} folder.
 {{< codeblock "/layouts/taxonomy/archive.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/taxonomy/archive.html">}}
 {{ partial "head.html" . }}
   <body>
@@ -212,7 +162,7 @@ Now the calendar should be visible on the website! Pretty awesome. Check out a [
 # Issues and solution
 
 {{< alert warning >}} Issue 1: The background circles for 'calendar days with articles' and 'today' are now showing. {{< /alert >}}
-Hugo websites with themes such as [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) and [XMag](https://themes.gohugo.io/hugo-xmag/) may have this issue when rendering the calendar.
+Hugo websites with themes such as [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) and [XMag](https://themes.gohugo.io/hugo-xmag/) display this issue when rendering the calendar.
 {{< alert success >}} Solution: {{< /alert >}}
 In the {{< hl-text primary >}}/static/css/style.css{{< /hl-text >}} file, add `opacity: 0.9` under `.calendar-day.calendar-day-has-articles` and `.calendar-day.calendar-day-is-today`. 
 ```
@@ -239,14 +189,4 @@ Make sure that the desired taxonomy terms are all included in the {{< hl-text pr
   archive = "archive"
   tag = "tags"
   category = "categories"
-```
-{{< alert warning >}} Issue 3: Days with articles are not correctly displayed in the calendar. {{< /alert >}}
-Hugo websites with theme [XMag](https://themes.gohugo.io/hugo-xmag/) may have this problem.
-{{< alert success >}} Solution: {{< /alert >}}
-Try changing `.GroupByPublishDate` to `.GroupByDate` in the {{< hl-text primary >}}layouts/partials/calendar.html{{< /hl-text >}} file.
-```
-{{ range ($pages.GroupByPublishDate "2006")   }}
-{{ range ($pages.GroupByPublishDate "2006-01")  }}
-{{ range ($pages.GroupByPublishDate "2006-01-02") }}
-# Change to .GroupByDate
 ```

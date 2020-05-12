@@ -18,7 +18,12 @@
 
 {{ range ($pages.GroupByPublishDate "2006-01-02") }}
     {{ $context.Scratch.SetInMap "ArticlesPerDay" .Key (len .Pages) }}
+    {{ range .Pages }}
+        {{ $context.Scratch.Set (.PublishDate.Format "2006-01-02") .Permalink }}
+    {{ end }}
 {{ end }}
+    
+
 
 {{ range $i, $sequence := (seq ((sub $to $from))) }}
     {{ $currentYear := $context.Scratch.Get "currentYear" }}
