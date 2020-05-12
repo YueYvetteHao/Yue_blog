@@ -156,7 +156,7 @@ For hugo to reconize customized css files, toggle the customCSS option in {{< hl
    [[params.customCSS]]
      href = "css/style.css"
 ```
-{{< alert info >}} If your website is already using a custom css, simple copy and paste the code for calendar styling into the custom css file. {{< /alert >}} 
+{{< alert info >}} If your website is already using a custom css, simply copy and paste the code for calendar styling into the custom css file. {{< /alert >}} 
 
 # Add the calendar to the frontpage
 
