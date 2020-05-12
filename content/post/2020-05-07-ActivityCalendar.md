@@ -38,13 +38,7 @@ Here are the partial files I created in the {{< hl-text orange >}}layouts/partia
 |  |  |-- post
 |  |  |  |-- archive.html
 ```
-{{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post. However, I modified the  {{< hl-text primary >}}calendar.html{{< /hl-text >}} file slightly, changing `.GroupByPublishDate` to `.GroupByDate`:
-```
-{{ range ($pages.GroupByPublishDate "2006") }}
-{{ range ($pages.GroupByPublishDate "2006-01") }}
-{{ range ($pages.GroupByPublishDate "2006-01-02") }}
-# Change to .GroupByDate
-```
+{{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post.
 
 The code for three types of listing (by year, month or day) were partly adapted from templates provided in [Generate Yearly and Monthly Archive Pages with Hugo Sections](https://blog.atj.me/2017/10/generate-yearly-and-monthly-archive-pages-with-hugo-sections/).
 {{< codeblock "archy.html "  "html" "https://github.com/YueYvetteHao/Yue_blog/blob/master/layouts/partials/archy.html">}}
