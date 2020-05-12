@@ -39,7 +39,7 @@ Here are the [partial](https://gohugo.io/templates/partials/) files I created in
 |  |  |  |-- archive.html
 ```
 {{< hl-text primary >}}calendar.html{{< /hl-text >}}, {{< hl-text primary >}}year.html{{< /hl-text >}}, {{< hl-text primary >}}month.html{{< /hl-text >}}, {{< hl-text primary >}}day.html{{< /hl-text >}} files were downloaded from the [Activity Calendar](https://gohugohq.com/partials/activity-calendar-posts/) blog post. 
-However, I edited the {{< hl-text primary >}}calendar.html{{< /hl-text >}} and {{< hl-text primary >}}day.html{{< /hl-text >}} files to allow users to click on the dates in the calendar and go directly to the article (if there was only one article posted on that day).
+However, I edited the {{< hl-text primary >}}calendar.html{{< /hl-text >}} and {{< hl-text primary >}}day.html{{< /hl-text >}} files to allow users to click on a date in the calendar and go to the article directly (if there was only one article posted on that day).
 
 In {{< hl-text primary >}}calendar.html{{< /hl-text >}} under `{{ range ($pages.GroupByPublishDate "2006-01-02") }}`, add:
 ```
