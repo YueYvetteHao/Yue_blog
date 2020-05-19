@@ -189,7 +189,7 @@ Now the calendar should be visible on the website! Pretty awesome. Check out a [
 
 # Issues and solution
 
-{{< alert warning >}} Issue 1: The background circles for 'calendar days with articles' and 'today' are now showing. {{< /alert >}}
+{{< alert warning >}} Issue 1: The background circles for 'calendar days with articles' and 'today' are not showing. {{< /alert >}}
 Hugo websites with themes such as [Tranquilpeak](https://themes.gohugo.io/hugo-tranquilpeak-theme/) and [XMag](https://themes.gohugo.io/hugo-xmag/) may have this issue when rendering the calendar.
 {{< alert success >}} Solution: {{< /alert >}}
 In the {{< hl-text primary >}}/static/css/style.css{{< /hl-text >}} file, add `opacity: 0.9` under `.calendar-day.calendar-day-has-articles` and `.calendar-day.calendar-day-is-today`. 
